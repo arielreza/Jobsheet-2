@@ -25,6 +25,23 @@ public class Buku18 {
         harga = hrg;
     }
 
+   int hitungHargaTotal(int jumlahTerjual) {
+    return harga * jumlahTerjual;
+   }
+
+   int hitungDiskon(int hargaTotal) {
+    int diskon = 0;
+    if (hargaTotal > 150000) {
+        diskon = (int) (0.12 * hargaTotal);
+    } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+        diskon = (int) (0.05 * hargaTotal);
+    }
+    return diskon;
+   }
+ int hitungHargaBayar(int hargaTotal, int diskon) {
+    return hargaTotal - diskon;
+ }
+
     public Buku18() {
 
     }
